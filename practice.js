@@ -78,12 +78,36 @@
 
 
 
-let result = "";
-function laugh(num) {
-      for (let i = 0; i < num; i++){
-      result = result + "ha";
-      }
-    result = result + "!";
-    return result;
+// let result = "";
+// function laugh(num) {
+//       for (let i = 0; i < num; i++){
+//       result = result + "ha";
+//       }
+//     result = result + "!";
+//     return result;
+// }
+// console.log(laugh(6));
+
+// function isThisWorking(input) {
+//   console.log("Printing: isThisWorking was called and " + input + " was passed in as an argument.");
+//   return "Returning: I am returning this string!";
+// }
+
+// isThisWorking(3);
+
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "* "
+  }
+  return line + "\n";
 }
-console.log(laugh(6));
+
+function buildTriangle(x){
+  var row = "";
+  for (let i = 1; i <= x; i++){
+    row += makeLine(i);
+  }
+  return row;
+}
+console.log(buildTriangle(72)); 
