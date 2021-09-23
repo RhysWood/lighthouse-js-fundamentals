@@ -95,19 +95,34 @@
 
 // isThisWorking(3);
 
-function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* "
-  }
-  return line + "\n";
+// function makeLine(length) {
+//   var line = "";
+//   for (var j = 1; j <= length; j++) {
+//     line += "* "
+//   }
+//   return line + "\n";
+// }
+
+// function buildTriangle(x){
+//   var row = "";
+//   for (let i = 1; i <= x; i++){
+//     row += makeLine(i);
+//   }
+//   return row;
+// }
+// console.log(buildTriangle(72)); 
+
+// const ageCalculator = function (name, yearOfBirth, currentYear){
+//   let age = 0;
+//   age = (currentYear - yearOfBirth);
+//   return name + " is " + age + " years old.";
+// }
+
+// console.log(ageCalculator("Dache", 1992, 2020));
+
+
+function howManyHundreds(num) {
+  return Math.floor(num / 100);
 }
 
-function buildTriangle(x){
-  var row = "";
-  for (let i = 1; i <= x; i++){
-    row += makeLine(i);
-  }
-  return row;
-}
-console.log(buildTriangle(72)); 
+console.log(howManyHundreds(894))
