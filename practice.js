@@ -121,8 +121,21 @@
 // console.log(ageCalculator("Dache", 1992, 2020));
 
 
-function howManyHundreds(num) {
-  return Math.floor(num / 100);
-}
+// function howManyHundreds(num) {
+//   return Math.floor(num / 100);
+// }
 
-console.log(howManyHundreds(894))
+// console.log(howManyHundreds(894))
+
+const range = function(start, end, step){
+  let output = [];
+  if (start < end && step >= 0){
+    for (let i = start; i <= end; i += step){
+      output.push(i)
+    }
+  }else {
+    return [];
+  }
+  return output;
+}
+console.log(range(20, 10, 2));
