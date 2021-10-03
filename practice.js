@@ -127,15 +127,71 @@
 
 // console.log(howManyHundreds(894))
 
-const range = function(start, end, step){
-  let output = [];
-  if (start < end && step >= 0){
-    for (let i = start; i <= end; i += step){
-      output.push(i)
-    }
-  }else {
-    return [];
-  }
-  return output;
+// const range = function(start, end, step){
+//   let output = [];
+//   if (start < end && step >= 0){
+//     for (let i = start; i <= end; i += step){
+//       output.push(i)
+//     }
+//   }else {
+//     return [];
+//   }
+//   return output;
+// }
+// console.log(range(20, 10, 2));
+
+// const concat = function(array1, array2){
+//   array3 = array1.concat(array2);
+//   return array3
+// }
+
+// const merge = function(arr1, arr2){
+//   let sortedArr = [];
+//   while(arr1.length && arr2.length){
+//     if (arr1[0] < arr2[0]){
+//       sortedArr.push(arr1.shift());
+//     } else {
+//       sortedArr.push(arr2.shift())
+//     }
+//   }
+// }
+
+
+// const smartGarbage = function(trash, [bins]){
+//   bins[trash]+1;
+//   return bins
+// }
+
+// const carPassing = function (cars, speed) {
+//   cars.push({ time: Date.now(), speed: speed } );
+//   return cars;
+// }
+
+const judgeVegetable = function (vegetables, metric) {
+  vegetables.sort(function (a, b) {
+    return b[metric] - a[metric];
+  });
+  return vegetables[0].submitter
 }
-console.log(range(20, 10, 2));
+
+const vegetables = [
+  {
+    submitter: 'Old Man Franklin',
+    redness: 10,
+    plumpness: 5
+  },
+  {
+    submitter: 'Sally Tomato-Grower',
+    redness: 2,
+    plumpness: 8
+  },
+  {
+    submitter: 'Hamid Hamidson',
+    redness: 4,
+    plumpness: 3
+  }
+]
+
+const metric = 'redness'
+
+console.log(judgeVegetable(vegetables, metric))
